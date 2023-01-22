@@ -1,0 +1,33 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.input{
+    height: 57px;
+    display: flex;
+    justify-content: space-between;
+ &__minus{
+    width: 25px;
+    height: 100%;
+    padding: 25.5px 5.5px;
+    &:hover{cursor:pointer;}
+    }
+ &__number{
+    width: 100%;
+    border: none;
+    background-color: v.$Light-grayish-blue;
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family:'Kumbh Sans', sans-serif;
+    text-align: center;
+    outline: none;
+ }
+ &__plus{
+    width: 25px;
+    height: 100%;
+    padding: 20px 2.5px;
+    &:hover{cursor:pointer;}
+ }
+ &__button{
+    @include mixins.button;
+ }
+}
