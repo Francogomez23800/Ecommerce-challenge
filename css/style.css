@@ -421,7 +421,6 @@ body {
 
 @media (min-width: 1115px) {
   .content-container {
-    border: 1px solid red;
     margin-top: 25px;
     margin-bottom: 25px;
     padding-top: 40px;
