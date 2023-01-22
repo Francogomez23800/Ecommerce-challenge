@@ -20,7 +20,9 @@ body {
 
 @media (min-width: 1115px) {
   .header {
-    height: 112px;
+    width: 1115px;
+    height: 95px;
+    margin: auto;
     border-bottom: 1px solid hsl(220deg, 14%, 75%);
   }
 }
@@ -115,8 +117,8 @@ body {
   text-decoration: none;
   color: hsl(219deg, 9%, 45%);
   display: block;
-  height: 112px;
-  padding-top: 42px;
+  height: 95px;
+  padding-top: 40px;
 }
 
 .navbar__link:hover {
@@ -319,6 +321,7 @@ body {
   .details {
     width: 446px;
     padding-top: 60px;
+    margin-left: 100px;
   }
 
   .details__title {
@@ -405,10 +408,34 @@ body {
   height: 260px;
   border-radius: 8px;
   box-shadow: 3px 3px 10px;
-  position: absolute;
-  top: 90px;
-  right: 6px;
   background-color: hsl(0deg, 0%, 100%);
+}
+
+@media (max-width: 1115px) {
+  .cart-modal {
+    position: absolute;
+    top: 75px;
+    right: 7px;
+  }
+}
+
+@media (min-width: 1115px) {
+  .content-container {
+    border: 1px solid red;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 1115px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cart-modal {
+    position: absolute;
+    top: 85px;
+    transform: translateX(370px)
+  }
 }
 
 .cart-modal__title {
@@ -463,9 +490,14 @@ body {
   opacity: 0.5;
 }
 
+.modal-gallery {
+  display: none;
+}
+
 @media (min-width: 1115px) {
   .modal-gallery {
     width: 550px;
+    display: block;
   }
 
   .modal-gallery__background {
@@ -474,7 +506,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 1;
     display: none;
     place-content: center;
@@ -559,7 +591,7 @@ body {
   }
 }
 
-@media (min-width: 1115px) and (min-width: 1115px) {
+@media (min-width: 1115px) {
   .modal-gallery__next {
     display: block;
   }
@@ -610,20 +642,25 @@ body {
 
 @media (min-width: 1115px) {
   .main-container {
-    width: 1115px;
+    width: 100%;
   }
 }
 
 @media (min-width: 1115px) {
   .content {
+    width: 1115px;
     display: flex;
-    margin: 90px 50px;
+    margin: auto;
     gap: 124px;
   }
 }
 
 .show {
   display: block;
+}
+
+.hide {
+  display: none;
 }
 
 .cart-empty {

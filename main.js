@@ -19,6 +19,23 @@ minusBtn.addEventListener('click', () => {
     userInput.value = userInputNumber;
 })
 
+
+//Image change
+
+const imageContainer = document.querySelector('.gallery__image-container')
+const nextGalleryBtn = document.querySelector('.gallery__next')
+const previousGalleryBtn = document.querySelector('.gallery__previous')
+let imgIndex = 1;
+
+nextGalleryBtn.addEventListener('click', () => {
+    changeNextImage(imageContainer);
+})
+
+previousGalleryBtn.addEventListener('click', () => {
+    changePreviousImage(imageContainer)
+})
+
+
 //Added to Cart
 
 const addToCartBtn = document.querySelector('.input__button');
@@ -48,6 +65,8 @@ const ProductContainer = document.querySelector('.cart-modal__checkout-container
 
 cartIcon.addEventListener('click', () => {
     cartModal.classList.toggle('show');
+    nextGalleryBtn.classList.toggle('hide')
+    previousGalleryBtn.classList.toggle('hide')
 });
 
 //Delete Product
@@ -62,22 +81,6 @@ function deleteProduct() {
         cartNotification.style.display = 'none';
     })
 }
-
-//Image change
-
-const imageContainer = document.querySelector('.gallery__image-container')
-const nextGalleryBtn = document.querySelector('.gallery__next')
-const previousGalleryBtn = document.querySelector('.gallery__previous')
-let imgIndex = 1;
-
-nextGalleryBtn.addEventListener('click', () => {
-    changeNextImage(imageContainer);
-})
-
-previousGalleryBtn.addEventListener('click', () => {
-    changePreviousImage(imageContainer)
-})
-
 
 //Show modal gallery
 
