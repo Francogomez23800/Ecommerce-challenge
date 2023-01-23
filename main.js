@@ -103,7 +103,7 @@ thumbnails = [...thumbnails]
 
 thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener('click', event => {
-        imageContainer.style.backgroundImage = `url('../images/image-product-${event.target.id}.jpg')`;
+        imageContainer.style.backgroundImage = `url('./images/image-product-${event.target.id}.jpg')`;
     })
 })
 
@@ -115,7 +115,7 @@ modalThumbnails = [...modalThumbnails]
 
 modalThumbnails.forEach(modalThumbnail => {
     modalThumbnail.addEventListener('click', event => {
-        modalImgContainer.style.backgroundImage = `url('../images/image-product-${event.target.id.slice(-1)}.jpg')`;
+        modalImgContainer.style.backgroundImage = `url('./images/image-product-${event.target.id.slice(-1)}.jpg')`;
     })
 });
 
@@ -175,7 +175,7 @@ function changeNextImage(imgContainer) {
         imgIndex = 0;
     }
     imgIndex++;
-    imgContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`
+    imgContainer.style.backgroundImage = `url('./images/image-product-${imgIndex}.jpg')`
 }
 
 function changePreviousImage(imgContainer) {
@@ -183,5 +183,5 @@ function changePreviousImage(imgContainer) {
         imgIndex = 5;
     }
     imgIndex--;
-    imgContainer.style.backgroundImage = `url('../images/image-product-${imgIndex}.jpg')`
+    imgContainer.style.backgroundImage = `url('./images/image-product-${imgIndex}.jpg')`
 }
